@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
-	"github.com/sonic/lib/utils/terminal"
 )
 
 func UserConfirmation(msg string) (string, bool, error) {
@@ -64,7 +62,7 @@ OK:
 }
 
 func NewMsg(msg string) string {
-	w, _ := terminal.GetDimensions()
+	w, _ := GetDimensions()
 
 	var newmsg []byte
 
